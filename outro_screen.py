@@ -14,8 +14,13 @@ def show_outro(score, game_window):
 
     # Create the Home button
     home_button = Rectangle(Point(150, 200), Point(350, 250))
+<<<<<<< HEAD
     home_button.setfill("blue")
     home_button.draw(outro.window)
+=======
+    home_button.setFill("blue")  # Corrected `setfill` to `setFill`
+    home_button.draw(outro_window)
+>>>>>>> ddf46592236105e537f62830575a4c3691aed373
     home_text = Text(Point(250, 225), "Home")
     home_text.setTextColor("white")
     home_text.draw(outro_window)
@@ -32,6 +37,7 @@ def show_outro(score, game_window):
     click_point = outro_window.getMouse()
 
     # Check if Home button was clicked
+<<<<<<< HEAD
     if home_button.getP1().getX90 < click_point.getX() < home_button.getP2().getX() and \
        home_button.getP1().getY() < click_point.getY() < home_button.getP2().getY():
         outro_window.close()
@@ -47,6 +53,24 @@ def show_outro(score, game_window):
           print("Restart button clicked")
         # Call your restart function here
 
+=======
+    if (home_button.getP1().getX() < click_point.getX() < home_button.getP2().getX() and
+        home_button.getP1().getY() < click_point.getY() < home_button.getP2().getY()):
+        outro_window.close()
+        # Return to home screen here
+        print("Home button clicked")
+        # Define home screen function here: show_home_screen()
+
+    # Check if Restart button was clicked
+    elif (restart_button.getP1().getX() < click_point.getX() < restart_button.getP2().getX() and
+          restart_button.getP1().getY() < click_point.getY() < restart_button.getP2().getY()):
+        outro_window.close()
+        # Restart the game (reset game state)
+        print("Restart button clicked")
+        # Call your restart function here
+
+# Additional toggle function for muting sounds
+>>>>>>> ddf46592236105e537f62830575a4c3691aed373
 def toggle_mute():
     global is_muted
     
@@ -64,6 +88,7 @@ def toggle_mute():
     # Toggle mute state
     is_muted = not is_muted
     print("Muted" if is_muted else "Unmuted")
+<<<<<<< HEAD
 
 
     
@@ -73,3 +98,5 @@ def toggle_mute():
     
 
     
+=======
+>>>>>>> ddf46592236105e537f62830575a4c3691aed373
